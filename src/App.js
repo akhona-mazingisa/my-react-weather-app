@@ -14,6 +14,8 @@ export default function App() {
           and is {" "}
       <a href="https://github.com/akhona-mazingisa/my-react-weather-app" target="_blank" rel="noreferrer"> 
       open-sourced on GitHub </a>
+      and 
+      <a href="https://my-shecodes-react-weather-app.netlify.app" target="_blank" rel="noreferrer"> hosted on Netlify </a>
       </footer>
       </div>
       </div>
