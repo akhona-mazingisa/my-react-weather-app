@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
     let [loaded, setLoaded] = useState(false);
@@ -17,17 +17,11 @@ export default function WeatherForecast(props) {
             <div className="WeatherForecast">
             <div className="row">
                 <div className="col">
-                    <div className="WeatherForecast-Day">Thu</div>
-                    <WeatherIcon code="01d" size={36} />
-                   <div className="WeatherForecast-temperatures">
-                    <span className="WeatherForecast-max">{forecast[0].temp.max}°</span>
-                    <span className="WeatherForecast-min>">10°</span>
-                    </div> 
+                    <WeatherForecastDay data={forecast[0]} />
                 </div>
             </div>
         </div>
         );
-        
     } else {
         let apiKey = "ab1cebc3634c669b08986492dfeea71f";
         let longitude = props.coordinates.lon;
